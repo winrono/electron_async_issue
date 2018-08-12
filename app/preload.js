@@ -1,0 +1,1 @@
+window.addon = require('../addon/build/Release/addon');

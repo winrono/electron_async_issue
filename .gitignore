@@ -1,0 +1,5 @@
+addon/build/
+addon/node_modules/
+node_modules/
+addon/bin/
+package-lock.json
