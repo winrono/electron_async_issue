@@ -41,14 +41,12 @@ class PiWorker : public AsyncWorker {
   // so it is safe to use V8 again
   void HandleOKCallback () {
     HandleScope scope;
-    auto context = Nan::GetCurrentContext();
-    auto global = context->Global();
     Local<Value> argv[] = {
         Null()
       , New<Number>(estimate)
     };
 
-    callback->Call(global, 2, argv, async_resource);
+    callback->Call(2, argv, async_resource);
   }
 
  private:
